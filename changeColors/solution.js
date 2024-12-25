@@ -11,13 +11,14 @@ const randomColor = () =>{
 let intervalId;
 
 const startChangingColor = () =>{
-    if(!intervalId){
-        intervalId = setInterval(changeBgColor, 1000);
-    }    
 
     const changeBgColor= () => {
         document.body.style.backgroundColor = randomColor();
-    }
+    };
+
+    if(!intervalId){
+        intervalId = setInterval(changeBgColor, 1000);
+    }    
 };
 
 const stopChangingColor = () => {
